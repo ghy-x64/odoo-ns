@@ -18,8 +18,16 @@ class PurchaseOrder(models.Model):
         res['partner'] = self.partner_id.name
         res['report_template'] = 'purchase.report_purchasequotation'
         return res
-
-    state = fields.Selection(selection_add=[('waiting_approval', 'Waiting Approval'), ('sent')])
+        
+    state = fields.Selection([
+        ('draft', 'RFQ'),
+        ('waiting_approval', 'Waiting Approval'),
+        ('sent', 'RFQ Sent'),
+        ('to approve', 'To Approve'),
+        ('purchase', 'Purchase Order'),
+        ('done', 'Locked'),
+        ('cancel', 'Cancelled')
+        ], string='Status', readonly=True, index=True, copy=False, default='draft', track_visibility='onchange')
 
     @api.multi
     def request_approval(self):

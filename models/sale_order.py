@@ -19,7 +19,14 @@ class SaleOrder(models.Model):
         res['report_template'] = 'sale.report_saleorder'
         return res
 
-    state = fields.Selection(selection_add=[('waiting_approval', 'Waiting Approval'),('sent')])
+    state = fields.Selection([
+        ('draft', 'Quotation'),
+        ('waiting_approval', 'Waiting Approval'),
+        ('sent', 'Quotation Sent'),
+        ('sale', 'Sales Order'),
+        ('done', 'Locked'),
+        ('cancel', 'Cancelled'),
+        ], string='Status', readonly=True, copy=False, index=True, track_visibility='onchange', default='draft')
 
     @api.multi
     def request_approval(self):
