@@ -17,7 +17,6 @@ class AbstractApprovable(models.AbstractModel):
             'name': self.name,
             'id': self.id,
             'username': self.user_id.name,
-            'dept': self.dept_id.name,
             'company': self.company_id.name,
             'last_edit_date': self.write_date,
             }
