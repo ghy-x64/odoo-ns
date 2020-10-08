@@ -29,7 +29,7 @@ class SaleOrder(models.Model):
         ], string='Status', readonly=True, copy=False, index=True, track_visibility='onchange', default='draft')
 
     @api.multi
-    def request_approval(self):
+    def action_request_approval(self):
         self.state = 'waiting_approval'
 
     @api.model
