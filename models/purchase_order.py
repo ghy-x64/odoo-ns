@@ -45,5 +45,5 @@ class PurchaseOrder(models.Model):
 
     @api.multi
     def json_refuse(self):
-        self.reject_action('Rejected from APP by %s' % self.env.user.name)
+        self.action_cancel()
         return {'status': self.state}
