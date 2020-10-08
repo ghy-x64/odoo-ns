@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="sale_order_view">
+		<field name="name">Sale Order</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//button[1]" position="after">
+					<button name="action_request_approval" type="object" states="draft" string="Request approval" />
+				</xpath>
+			</data>
+		</field>
+	</record>
+</odoo>
