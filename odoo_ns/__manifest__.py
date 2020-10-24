@@ -2,12 +2,13 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
     'name': "Odoo - NS Mobile Apps",
-    'summary': """Odoo - NS Mobile Apps""",
+    'summary': """Approve SO PO from iOS device""",
     'description': """
-        Odoo - NS Mobile App""",
-    'author': 'GHY',
+        Approve SO PO from iOS device""",
+    'author': 'Numberspeaks',
     'category': 'Apps',
     'version': '1.0',
+    'license': "AGPL-3",
     'depends': [
         'sale',
         'purchase',
