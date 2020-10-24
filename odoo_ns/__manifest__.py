@@ -18,7 +18,6 @@
         'views/sale_order_view.xml'
     ],
     'images': [
-    	'static/description/icon.png',
     	'static/description/odoo-ns-odoo-store.png'
     ],
     'installable': True,
