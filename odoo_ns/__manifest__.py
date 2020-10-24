@@ -6,7 +6,7 @@
     'description': """
         Approve SO PO from iOS device""",
     'author': 'Numberspeaks',
-    "website": "https://github.com/ghy-x64/odoo-ns",
+    "website": "http://www.numberspeaks.com/2020/10/12/odoo-so-po-mobile-approval/",
     'category': 'Apps',
     'version': '1.0',
     'license': "AGPL-3",
