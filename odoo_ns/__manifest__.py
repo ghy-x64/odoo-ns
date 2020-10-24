@@ -19,7 +19,7 @@
     ],
     'images': [
     	'static/description/icon.png',
-    	'static/description/odoo-ns-odoo-store.png',
+    	'static/description/odoo-ns-odoo-store.png'
     ]
     'installable': True,
 }
