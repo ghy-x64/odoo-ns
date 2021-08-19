@@ -50,5 +50,4 @@
         </record>
         <menuitem id="database_connection_menu" name="Database Connection" parent="menu_reporting_app_root" action="action_database_connection" sequence="4" />
     </data>
-    <?xml version="1.0" encoding="utf-8"?>
-    < /odoo>
+</odoo>
