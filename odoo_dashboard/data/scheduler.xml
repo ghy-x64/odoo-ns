@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <record id="ir_cron_update_widget_action" model="ir.cron">
+        <record id="ir_cron_update_widget_action" forcecreate='True' model="ir.cron">
             <field name="name">Odoo dashboard: Update widgets</field>
+            <field eval="True" name="active" />
             <field name="user_id" ref="base.user_root" />
-            <field name="interval_number">10</field>
-            <field name="interval_type">minutes</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
             <field name="numbercall">-1</field>
-            <field eval="False" name="doall" />
-            <field eval="'reporting.dashboard.widget'" name="model" />
-            <field eval="'schedule_update_widget_action'" name="function" />
+            <field name="model_id" ref="reporting.dashboard.widget" />
+            <field name="state">code</field>
+            <field name="code">model.schedule_update_widget_action()</field>
         </record>
     </data>
 </openerp>
