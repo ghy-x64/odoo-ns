@@ -24,6 +24,7 @@ User access can be managed through the menu access group.
         'views/reporting_dashboard_line_view.xml',
         'views/database_connection_view.xml',
         'views/reporting_access_group_view.xml',
+        'data/data.xml',
     ],
     'demo': [],
     'installable': True,

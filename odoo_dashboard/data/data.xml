@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="database.connection">
+            <field name="name">Localhost</field>
+            <field name="server">localhost</field>
+            <field name="server_type">localhost</field>
+            <field name="username"></field>
+            <field name="password"></field>
+            <field name="database"></field>
+        </record>
+        <record model="database.connection">
+            <field name="name">Example MSSQL</field>
+            <field name="server">192.168.1.10\{YourInstance}</field>
+            <field name="server_type">pyodbc</field>
+            <field name="username">username</field>
+            <field name="password">password</field>
+            <field name="database">yourDb</field>
+        </record>
+        <record model="reporting.dashboard.widget">
+            <field name="name">Example WidgetSingleX</field>
+            <field name="user_id">1</field>
+            <field name="sql_query"></field>
+            <field name="widget_type">WidgetSingleX</field>
+            <field name="result">[{'X_VALUE': 271}]</field>
+            <field name="column_name">['X_VALUE']</field>
+            <field name="dict_data">{'note': False, 'widget_type': u'WidgetSingleX', 'write_date': '2021-08-16 08:40:01', 'sequence': 2, 'widget_name': u'WidgetSingleX type example', 'data': [{'X_VALUE': 271}], 'id': 1, 'column_name': ['X_VALUE']}</field>
+            <field name="sequence">0</field>
+            <field name="is_enabled">True</field>
+            <field name="note"></field>
+            <field name="database_connection_id">1</field>
+        </record>
+        <record model="reporting.dashboard.widget">
+            <field name="name">Example WidgetLastX</field>
+            <field name="user_id">1</field>
+            <field name="sql_query"></field>
+            <field name="widget_type">WidgetLastX</field>
+            <field name="result">[{'KEY_COL': '2021-08-02', 'TOTAL': 32221, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-03', 'TOTAL': 3221, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-04', 'TOTAL': 32114, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-05', 'TOTAL': 66654, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-06', 'TOTAL': 342776, 'CURRENCY': 'USD'}]</field>
+            <field name="column_name">['KEY_COL', 'TOTAL', 'CURRENCY']</field>
+            <field name="dict_data">{'widget_type': u'WidgetLastX', 'sequence': 0, 'write_date': u'2021-08-11 12:00:00','widget_name': u'SO Last 7 days', 'note': False, 'data': [{'KEY_COL': '2021-08-02', 'TOTAL': 32221, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-03', 'TOTAL': 3221, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-04', 'TOTAL': 32114, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-05', 'TOTAL': 66654, 'CURRENCY': 'USD'}, {'KEY_COL': '2021-08-06', 'TOTAL': 342776, 'CURRENCY': 'USD'}], 'id': 2, 'column_name': ['KEY_COL', 'TOTAL', 'CURRENCY']}</field>
+            <field name="sequence">0</field>
+            <field name="is_enabled">True</field>
+            <field name="note"></field>
+            <field name="database_connection_id">1</field>
+        </record>
+        <record model="reporting.dashboard.widget">
+            <field name="name">Example WidgetXVsY</field>
+            <field name="user_id">1</field>
+            <field name="sql_query"></field>
+            <field name="widget_type">WidgetXVsY</field>
+            <field name="result">[{'Y_VALUE': 7459300.02, 'CURRENCY': 'USD', 'CODE': 'X', 'NAME': u'Customer X', 'X_VALUE': 13841740.57}]</field>
+            <field name="column_name">['CODE', 'CURRENCY', 'NAME', 'X_VALUE', 'Y_VALUE']</field>
+            <field name="dict_data">{'widget_type': u'WidgetXVsY', 'write_date': u'2021-08-11 12:00:00', 'sequence': 2, 'widget_name': u'X vs Y example', 'note': False, 'data': [{'Y_VALUE': 7459300.02, 'CURRENCY': 'USD', 'CODE': 'X', 'NAME': u'Customer X', 'X_VALUE': 13841740.57}], 'id': 3, 'column_name': ['CODE', 'CURRENCY', 'NAME', 'X_VALUE', 'Y_VALUE']}</field>
+            <field name="sequence">0</field>
+            <field name="is_enabled">True</field>
+            <field name="note"></field>
+            <field name="database_connection_id">1</field>
+        </record>
+    </data>
+</odoo>
