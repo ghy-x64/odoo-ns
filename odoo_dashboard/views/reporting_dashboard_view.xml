@@ -52,7 +52,7 @@
                 </p>
             </field>
         </record>
-        <menuitem name="Dashboard APP" id="menu_reporting_app_root" groups="lgf_reporting_app.group_manager" />
+        <menuitem name="Dashboard APP" id="menu_reporting_app_root" groups="odoo_dashboard.group_manager" />
         <menuitem id="dashboard_menu" name="Dashboard" parent="menu_reporting_app_root" action="action_reporting_dashboard" sequence="1" />
     </data>
 </odoo>
