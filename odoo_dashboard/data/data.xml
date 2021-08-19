@@ -28,7 +28,6 @@
             <field name="sequence">0</field>
             <field name="is_enabled">True</field>
             <field name="note"></field>
-            <field name="database_connection_id">1</field>
         </record>
         <record model="reporting.dashboard.widget">
             <field name="name">Example WidgetLastX</field>
@@ -41,7 +40,6 @@
             <field name="sequence">0</field>
             <field name="is_enabled">True</field>
             <field name="note"></field>
-            <field name="database_connection_id">1</field>
         </record>
         <record model="reporting.dashboard.widget">
             <field name="name">Example WidgetXVsY</field>
@@ -54,7 +52,6 @@
             <field name="sequence">0</field>
             <field name="is_enabled">True</field>
             <field name="note"></field>
-            <field name="database_connection_id">1</field>
         </record>
     </data>
 </odoo>
