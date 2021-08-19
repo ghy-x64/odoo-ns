@@ -12,6 +12,7 @@ Widgets available:
 - WidgetLastX: Could be used to display last x days, months, years data
 - WidgetSingleX: Display a relevent number
 User access can be managed through the menu access group.
+Package pyodbc is required: apt-get install python3-pyodbc python-pyodbc
     """,
     'author': 'GH',
     'depends': ['base'],
