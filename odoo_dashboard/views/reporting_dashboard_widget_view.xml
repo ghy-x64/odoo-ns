@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="reporting_dashboard_widget_tree_view">
+            <field name="name">reporting.dashboard.widget</field>
+            <field name="model">reporting.dashboard.widget</field>
+            <field name="arch" type="xml">
+                <tree string="Widget Tree">
+                    <field name="sequence" widget="handle" />
+                    <field name="user_id" />
+                    <field name="name" />
+                    <field name="database_connection_id" />
+                    <field name="sql_query" />
+                    <field name="widget_type" />
+                    <field name="is_enabled" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="reporting_dashboard_widget_form_view">
+            <field name="name">reporting.dashboard.widget</field>
+            <field name="model">reporting.dashboard.widget</field>
+            <field name="arch" type="xml">
+                <form string="Widget">
+                    <header>
+                        <button name="action_request" string="Request" type="object" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="user_id" />
+                            <field name="name" />
+                            <field name="database_connection_id" />
+                            <field name="widget_type" />
+                            <field name="is_enabled" />
+                        </group>
+                        <notebook>
+                            <page string="SQL Query">
+                                <field name="sql_query" />
+                            </page>
+                            <page string="note">
+                                <field name="note" />
+                            </page>
+                            <page string="Access group">
+                                <field name="access_group_ids" />
+                            </page>
+                        </notebook>
+                        <hr />
+                        <field name="result_format_help" />
+                        <hr />
+                        <notebook>
+                            <page string="dictionnary data">
+                                <field name="dict_data" />
+                            </page>
+                            <page string="result">
+                                <field name="result" />
+                            </page>
+                            <page string="column name">
+                                <field name="column_name" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_reporting_dashboard_widget" model="ir.actions.act_window">
+            <field name="name">reporting.dashboard.widget</field>
+            <field name="res_model">reporting.dashboard.widget</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="reporting_dashboard_widget_tree_view" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p>
+                    Create
+                </p>
+            </field>
+        </record>
+        <menuitem id="widget_menu" name="Widget" parent="menu_reporting_app_root" action="action_reporting_dashboard_widget" sequence="3" />
+    </data>
+</odoo>

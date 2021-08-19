@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="reporting_dashboard_tree_view">
+            <field name="name">reporting.dashboard</field>
+            <field name="model">reporting.dashboard</field>
+            <field name="arch" type="xml">
+                <tree string="Dashboard Tree">
+                    <field name="sequence" />
+                    <field name="user_id" />
+                    <field name="name" />
+                    <field name="is_default" />
+                    <field name="widget_count" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="reporting_dashboard_form_view">
+            <field name="name">reporting.dashboard</field>
+            <field name="model">reporting.dashboard</field>
+            <field name="arch" type="xml">
+                <form string="Dashboard">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="sequence" />
+                            <field name="user_id" />
+                            <field name="name" />
+                            <field name="is_default" />
+                            <field name="widget_count" />
+                        </group>
+                        <notebook>
+                            <page string="Widgets">
+                                <field name="widget_line_ids" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_reporting_dashboard" model="ir.actions.act_window">
+            <field name="name">reporting.dashboard</field>
+            <field name="res_model">reporting.dashboard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="reporting_dashboard_tree_view" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p>
+                    Create
+                </p>
+            </field>
+        </record>
+        <menuitem name="Dashboard APP" id="menu_reporting_app_root" groups="lgf_reporting_app.group_manager" />
+        <menuitem id="dashboard_menu" name="Dashboard" parent="menu_reporting_app_root" action="action_reporting_dashboard" sequence="1" />
+    </data>
+</odoo>

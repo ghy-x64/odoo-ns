@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="reporting_access_group_tree_view">
+            <field name="name">reporting.access.group</field>
+            <field name="model">reporting.access.group</field>
+            <field name="arch" type="xml">
+                <tree string="Access group">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="reporting_access_group_form_view">
+            <field name="name">reporting.access.group</field>
+            <field name="model">reporting.access.group</field>
+            <field name="arch" type="xml">
+                <form string="Dashboard">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <notebook>
+                            <page string="Users">
+                                <field name="user_ids" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_reporting_access_group" model="ir.actions.act_window">
+            <field name="name">reporting.access.group</field>
+            <field name="res_model">reporting.access.group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="reporting_access_group_tree_view" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p>
+                    Create
+                </p>
+            </field>
+        </record>
+        <menuitem id="access_group_menu" name="Access group" parent="menu_reporting_app_root" action="action_reporting_access_group" sequence="5" />
+    </data>
+</odoo>
