@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record model="database.connection">
+        <record id="localhost_connection" model="database.connection">
             <field name="name">Localhost</field>
             <field name="server">localhost</field>
             <field name="server_type">localhost</field>
@@ -28,7 +28,7 @@
             <field name="sequence">0</field>
             <field name="is_enabled">True</field>
             <field name="note"></field>
-            <field name="database_connection_id">1</field>
+            <field name="database_connection_id" eval="ref('odoo_dashboard.localhost_connection')" />
         </record>
         <record model="reporting.dashboard.widget">
             <field name="name">Example WidgetLastX</field>
@@ -41,7 +41,7 @@
             <field name="sequence">0</field>
             <field name="is_enabled">True</field>
             <field name="note"></field>
-            <field name="database_connection_id">1</field>
+            <field name="database_connection_id" eval="ref('odoo_dashboard.localhost_connection')" />
         </record>
         <record model="reporting.dashboard.widget">
             <field name="name">Example WidgetXVsY</field>
@@ -54,7 +54,7 @@
             <field name="sequence">0</field>
             <field name="is_enabled">True</field>
             <field name="note"></field>
-            <field name="database_connection_id">1</field>
+            <field name="database_connection_id" eval="ref('odoo_dashboard.localhost_connection')" />
         </record>
     </data>
 </odoo>
