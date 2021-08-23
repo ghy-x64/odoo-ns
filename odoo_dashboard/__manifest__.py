@@ -1,5 +1,5 @@
 {
-    'name': 'Odoo dashboard',
+    'name': 'Odoo iOS mobile dashboard',
     'version': '0.1',
     'category': 'tools',
     "website": "http://www.numberspeaks.com",
@@ -29,6 +29,7 @@ Package pyodbc is required: apt-get install python3-pyodbc python-pyodbc
         'views/reporting_access_group_view.xml',
         'data/data.xml',
     ],
+    'images': ['static/description/dashboard_screens.png'],
     'demo': [],
     'installable': True,
     'auto_install': False,
