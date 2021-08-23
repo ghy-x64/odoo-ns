@@ -2,6 +2,7 @@
     'name': 'Odoo dashboard',
     'version': '0.1',
     'category': 'tools',
+    "website": "http://www.numberspeaks.com",
     'description': """
 This module is required in order to use Odoo dashboard app (available only on Apple AppStore), 
 it connects databases locally or remotely (MSSQL, MySQL, Postgres), schedules SQL requests and retrieve data. 
@@ -14,7 +15,8 @@ Widgets available:
 User access can be managed through the menu access group.
 Package pyodbc is required: apt-get install python3-pyodbc python-pyodbc
     """,
-    'author': 'GH',
+    'author': 'NS',
+    "license": "LGPL-3",
     'depends': ['base'],
     'data': [
         'security/ir_rule.xml',
